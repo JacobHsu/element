@@ -12,6 +12,23 @@ merge
 cd element
 ```
 
+[npm 安装](https://element.eleme.cn/#/zh-CN/component/installation) 
+
+`npm i element-ui -S`  
+
+package.json
+```js
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "element-ui": "^2.7.2",
+    "vue": "^2.6.10"
+  },
+```
+
+多國語兼容 `vue-i18n`  
+
+組件 [內置過渡動畫](https://element.eleme.cn/#/zh-CN/component/transition)
+
 ## Project setup
 ```
 npm install
