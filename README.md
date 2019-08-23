@@ -39,6 +39,10 @@ package.json
 
 `npm i vue-router --save`  
 
+## npm 
+
+[![NPM](https://nodei.co/npm/gh-pages.png?downloads=true&stars=true)](https://nodei.co/npm/gh-pages/)  https://jacobhsu.github.io/element/
+
 ## Project setup
 ```
 npm install
