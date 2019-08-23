@@ -29,6 +29,11 @@ package.json
 
 組件 [內置過渡動畫](https://element.eleme.cn/#/zh-CN/component/transition)
 
+
+## router
+
+`npm i vue-router --save`  
+
 ## Project setup
 ```
 npm install
