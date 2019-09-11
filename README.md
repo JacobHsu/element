@@ -32,7 +32,18 @@ package.json
 
 ## Docs
 
-[Button 按钮](https://element.eleme.io/#/zh-CN/component/button)  
+[Button 按钮](https://element.eleme.io/#/zh-CN/component/button)    
+[Layout 布局](https://element.eleme.io/#/zh-CN/component/layout)  
+
+## debug
+
+`<style lang="scss" scoped>`
+
+Failed to resolve loader: `sass-loader`
+You may need to install it.
+
+Vue2+element UI 项目中需要用到 `<style lang="scss">`
+`npm install node-sass`  
 
 
 ## router
