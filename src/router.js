@@ -24,6 +24,11 @@ export default new Router({
         name: 'layout',
         component: () => import('./views/Layout.vue')
       },
+      {
+        path: '/select',
+        name: 'select',
+        component: () => import('./views/Select.vue')
+      },
     ]
   })
   

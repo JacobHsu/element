@@ -1,5 +1,8 @@
 # element
 
+https://jacobhsu.github.io/element/
+
+
 [Element](https://element.eleme.cn/#/zh-CN)，一套為開發者、設計師和產品經理準備的基於 Vue 2.0 的桌面端組件庫  
 [快速上手](https://element.eleme.cn/#/zh-CN/component/quickstart)  
 
@@ -34,6 +37,7 @@ package.json
 
 [Button 按钮](https://element.eleme.io/#/zh-CN/component/button)    
 [Layout 布局](https://element.eleme.io/#/zh-CN/component/layout)  
+[Select 选择器](https://element.eleme.io/#/zh-CN/component/select)
 
 ## debug
 
