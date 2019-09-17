@@ -39,6 +39,18 @@ package.json
 [Layout 布局](https://element.eleme.io/#/zh-CN/component/layout)  
 [Select 选择器](https://element.eleme.io/#/zh-CN/component/select)
 
+
+## layout
+
+The [`rows`](https://www.w3schools.com/tags/att_rows.asp) attribute specifies the visible `height` of a text area, in lines 
+
+`align` 對齊 rows 表示高度  middle表示高度置中
+[align](https://element.eleme.io/#/zh-CN/component/layout)	flex 布局下的垂直排列方式
+
+`<el-row type="flex" :gutter="20" align="middle">` 垂直置中  
+
+`<el-col :span="4" align='end'>Name</el-col>`  水平置尾  
+
 ## debug
 
 `<style lang="scss" scoped>`
