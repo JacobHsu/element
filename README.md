@@ -37,8 +37,8 @@ package.json
 
 [Button 按钮](https://element.eleme.io/#/zh-CN/component/button)    
 [Layout 布局](https://element.eleme.io/#/zh-CN/component/layout)  
-[Select 选择器](https://element.eleme.io/#/zh-CN/component/select)
-
+[Select 选择器](https://element.eleme.io/#/zh-CN/component/select)  
+[Table 表格](https://element.eleme.io/#/zh-CN/component/table)  
 
 ## layout
 
@@ -50,6 +50,12 @@ The [`rows`](https://www.w3schools.com/tags/att_rows.asp) attribute specifies th
 `<el-row type="flex" :gutter="20" align="middle">` 垂直置中  
 
 `<el-col :span="4" align='end'>Name</el-col>`  水平置尾  
+
+
+## issue 
+
+[element-ui 表格的行數的某個值按照介面傳的不同值顯示不同的顏色](https://www.itread01.com/content/1541645523.html)
+[深入理解vue中的slot与slot-scope](https://segmentfault.com/a/1190000012996217)  单个插槽 | 默认插槽 | 匿名插槽
 
 ## debug
 
