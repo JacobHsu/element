@@ -40,6 +40,12 @@ package.json
 [Select 选择器](https://element.eleme.io/#/zh-CN/component/select)  
 [Table 表格](https://element.eleme.io/#/zh-CN/component/table)  
 
+#### problem
+> Unknown custom element: <el-avatar> - did you register the component correctly? For recursive components, make sure to provide the "name"
+[Link 文字链接](https://element.eleme.cn/#/zh-CN/component/link)
+[Avatar 头像](https://element.eleme.cn/#/zh-CN/component/avatar)
+
+
 ## layout
 
 The [`rows`](https://www.w3schools.com/tags/att_rows.asp) attribute specifies the visible `height` of a text area, in lines 
