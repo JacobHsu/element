@@ -39,6 +39,8 @@ package.json
 [Layout 布局](https://element.eleme.io/#/zh-CN/component/layout)  
 [Select 选择器](https://element.eleme.io/#/zh-CN/component/select)  
 [Table 表格](https://element.eleme.io/#/zh-CN/component/table)  
+[Color 色彩](https://element.eleme.io/#/zh-CN/component/color)  
+> <span class="text-danger">*</span>  
 
 #### problem
 > Unknown custom element: <el-avatar> - did you register the component correctly? For recursive components, make sure to provide the "name"
