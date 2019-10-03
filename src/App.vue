@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/button">Button</router-link> |
       <router-link to="/layout">Layout</router-link> |
-      <router-link to="/select">Select</router-link>
+      <router-link to="/select">Select</router-link> |
+      <router-link to="/badge">badge</router-link>
     </div>
     <router-view/>
   </div>

@@ -41,6 +41,7 @@ package.json
 [Table 表格](https://element.eleme.io/#/zh-CN/component/table)  
 [Color 色彩](https://element.eleme.io/#/zh-CN/component/color)  
 > <span class="text-danger">*</span>  
+[Badge 标记](https://element.eleme.io/#/zh-CN/component/badge)  
 
 #### problem
 > Unknown custom element: <el-avatar> - did you register the component correctly? For recursive components, make sure to provide the "name"

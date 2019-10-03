@@ -29,6 +29,11 @@ export default new Router({
         name: 'select',
         component: () => import('./views/Select.vue')
       },
+      {
+        path: '/badge',
+        name: 'badge',
+        component: () => import('./views/Badge.vue')
+      },
     ]
   })
   
