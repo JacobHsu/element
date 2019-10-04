@@ -48,6 +48,9 @@ package.json
 [Link 文字链接](https://element.eleme.cn/#/zh-CN/component/link)
 [Avatar 头像](https://element.eleme.cn/#/zh-CN/component/avatar)
 
+[element ui下拉框如何实现默认选择?](https://segmentfault.com/q/1010000008962854)  
+注意 v-model="value4" 这里的 value4 要和 options 里的 value 保持一致  value:"1"  value4="1"
+
 
 ## layout
 
@@ -65,6 +68,14 @@ The [`rows`](https://www.w3schools.com/tags/att_rows.asp) attribute specifies th
 
 [element-ui 表格的行數的某個值按照介面傳的不同值顯示不同的顏色](https://www.itread01.com/content/1541645523.html)
 [深入理解vue中的slot与slot-scope](https://segmentfault.com/a/1190000012996217)  单个插槽 | 默认插槽 | 匿名插槽
+
+
+## Form
+
+[Form 表单](https://element.eleme.io/#/zh-CN/component/form) 
+[element-ui Form表單驗證規則全解](https://www.itread01.com/content/1545621854.html)  
+[element-ui 如何控制form-item错误的显示](https://segmentfault.com/q/1010000010177594)  
+[Vue.js - Element UI - Form item label slot](https://stackoverflow.com/questions/44377070/vue-js-element-ui-form-item-label-slot)
 
 ## debug
 
