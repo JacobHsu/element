@@ -76,6 +76,16 @@ The [`rows`](https://www.w3schools.com/tags/att_rows.asp) attribute specifies th
 [element-ui Form表單驗證規則全解](https://www.itread01.com/content/1545621854.html)  
 [element-ui 如何控制form-item错误的显示](https://segmentfault.com/q/1010000010177594)  
 [Vue.js - Element UI - Form item label slot](https://stackoverflow.com/questions/44377070/vue-js-element-ui-form-item-label-slot)
+[el-input的多种验证](https://www.kancloud.cn/oliver556/element/1016084)  
+[el-form-item__error 無法修改樣式](https://www.itread01.com/content/1545298806.html)
+[深度作用选择器](https://233px.com/15184274797002.html)  
+```css
+<style scoped>
+.container /deep/ .ele-item {
+  font-size: 16px;
+}
+</style>
+```
 
 ## debug
 
