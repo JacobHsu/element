@@ -87,6 +87,10 @@ The [`rows`](https://www.w3schools.com/tags/att_rows.asp) attribute specifies th
 </style>
 ```
 
+校驗規則參見[async-validator](https://github.com/yiminghe/async-validator)  
+`{ type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }`  
+[element-ui Form表單驗證規則全解](https://www.itread01.com/content/1545621854.html)  
+
 ## debug
 
 `<style lang="scss" scoped>`
