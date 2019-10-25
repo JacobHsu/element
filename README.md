@@ -101,6 +101,8 @@ You may need to install it.
 Vue2+element UI 项目中需要用到 `<style lang="scss">`
 `npm install node-sass`  
 
+vue项目报错'Do not use built-in or reserved HTML elements as component id: forn'  
+> 這是因為組件的命名和html標籤重複導致警告，所以創建組件的時候要注意組件命名與html標籤區分開
 
 ## router
 

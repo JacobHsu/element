@@ -1,6 +1,10 @@
 <template>
   <div>
-    <el-form :model="dynamicValidateForm" ref="dynamicValidateForm" label-width="100px" class="demo-dynamic">
+    <el-form :model="dynamicValidateForm" 
+              ref="dynamicValidateForm"
+              :rules="rules" 
+              label-width="100px" 
+              class="demo-dynamic">
         <el-form-item
             prop="email"
             label="邮箱"
@@ -18,24 +22,20 @@
             :label="'域名' + index"
             :key="domain.key"
             :prop="'domains.' + index + '.value'"
-            :rules="[
-                {required: true, message: '域名不能为空', trigger: 'blur'},
-                {max:2, message: '長度至多為2'}
-            ]"
         >
-            <el-input v-model="domain.value"></el-input>
+            <el-input v-model="domain.value" @input="handleInput"></el-input>
         </el-form-item>
         <el-form-item
-            v-for="(domain, index) in vForData"
+            v-for="(domain2, index) in vForData"
             :label="' v-for域名' + index"
-            :key="domain.key"
+            :key="domain2.key"
             :prop="'domains.' + index + '.value'"
             :rules="[
                 {required: true, message: 'v-for域名不能为空', trigger: 'blur'},
                 {max:3, message: '長度至多為3', trigger: 'change'}
             ]"
         >
-            <el-input v-model="domain.value"></el-input>
+            <el-input v-model="domain2.value"></el-input>
         </el-form-item>
         <el-form-item>
             <el-button type="primary" @click="submitForm('dynamicValidateForm')">提交</el-button>
@@ -49,9 +49,55 @@
 
 <script>
   export default {
-    name: "form",
+    name: "elform",
     data() {
+        const validateStrAndNum = (rule, value, callback) => {
+        if (value) {
+          setTimeout(() => {
+            const reg = /^[\w\s]+$/;
+            if (!reg.test(value)) {
+              callback(new Error('仅可为英数字与空白'));
+            } else {
+              callback();
+            }
+          }, 200);
+        } else {
+          callback();
+        }
+      };
+      const validateDecimal = (rule, value, callback) => {
+        if (value) {
+            const maxDigitLen = 2
+            let digitLength = null
+            try {
+              digitLength = `${value}`.split('.')[1].length //判斷小數點位數
+            } catch (err) {
+              digitLength = 0
+            }
+            const isValid = digitLength <= maxDigitLen && !isNaN(value)
+
+            if (isValid) {
+              callback();
+            } else {
+              callback(new Error('小數點位數限制兩位'));
+            }
+  
+        } else {
+          callback();
+        }
+      };
       return {
+        domain: {
+          value: 0
+        },
+        rules: {
+          'domains.0.value': [
+            {required: true, message: '域名不能为空', trigger: 'blur'},
+            {max:5, message: '長度至多為5'},
+            //{validator: validateStrAndNum },
+            {validator: validateDecimal }
+          ],
+        },
         vForData: [{
             value: ''
         }],
@@ -64,6 +110,15 @@
       };
     },
     methods: {
+      handleInput(inputValue) {
+        const decimalLen = 2 
+        let maxNum = 5000
+        let maxLen = maxNum.toString().length
+        let inputLen = inputValue.length
+
+        let displayValue = inputLen > maxLen ? maxNum : inputValue;
+        this.dynamicValidateForm.domains[0].value = displayValue
+      },
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
