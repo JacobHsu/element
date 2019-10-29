@@ -30,7 +30,16 @@ package.json
 
 多國語兼容 `vue-i18n`  
 
+
+## Component 
+[Dialog](https://element.eleme.cn/#/zh-CN/component/dialog) 对话框  
 組件 [內置過渡動畫](https://element.eleme.cn/#/zh-CN/component/transition)
+
+## Usage 
+
+`element> yarn serve`  
+App running at:
+  - Local:   http://localhost:8080/element/
 
 
 ## Docs
@@ -103,6 +112,12 @@ Vue2+element UI 项目中需要用到 `<style lang="scss">`
 
 vue项目报错'Do not use built-in or reserved HTML elements as component id: forn'  
 > 這是因為組件的命名和html標籤重複導致警告，所以創建組件的時候要注意組件命名與html標籤區分開
+
+
+ * [Vue warn]: Avoid mutating a prop directly since the value will be overwritten whenever the parent component re-renders. Instead, use a data or computed property based on the prop's value.
+组件内不能修改props的值，同时修改的值也不会同步到组件外层，即调用组件方不知道组件内部当前的状态是什么
+在vue2.0中移除了组件的props的双向数据绑定功能，如果需要双向绑定需要自己来实现。
+归结为一句话就是：组件内部自己变了告诉外部，外部决定要不要变。  
 
 ## router
 
