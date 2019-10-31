@@ -15,6 +15,12 @@
         >
             <el-input v-model="dynamicValidateForm.email"></el-input>
         </el-form-item>
+        <el-form-item
+            prop="bank"
+            label="銀行"
+        >
+            <el-input v-model="dynamicValidateForm.bank"></el-input>
+        </el-form-item>
         <!--注意正常验证表单项是prop，而这里是:prop。
 :prop="'productGroup.'+index+'.num'"是拼接的形式，前面是v-for绑定的数组，中间是数组索引index，最后是表单项绑定的v-model的名称，然后用点.把它们连接起来。这三项都必须保证正确，错一个都无法验证。-->
         <el-form-item
@@ -51,7 +57,25 @@
   export default {
     name: "elform",
     data() {
-        const validateStrAndNum = (rule, value, callback) => {
+      const validateBank = (rule, value, callback) => {
+        // 注意 el-input value 值要能收到 
+        // <el-form :model="dynamicValidateForm" 
+        // <el-input v-model 的值必須在form model下 `v-model="dynamicValidateForm.bank"` 
+        // 且 <el-form-item 的 prop 的值要等於同次級的名   `prop="bank"`
+        if (value) {
+          setTimeout(() => {
+            const reg = /([\d]{4})([\d]{4})([\d]{4})([\d]{4})([\d]{0,})?/;
+            if (!reg.test(value)) {
+              callback(new Error('请输入正确的银行卡号'));
+            } else {
+              callback();
+            }
+          }, 200);
+        } else {
+          callback();
+        }
+      };
+      const validateStrAndNum = (rule, value, callback) => {
         if (value) {
           setTimeout(() => {
             const reg = /^[\w\s]+$/;
@@ -91,6 +115,10 @@
           value: 0
         },
         rules: {
+          'bank': [
+            {max: 16, message: '長度至多為16', trigger: 'change'},
+            {validator: validateBank }
+          ],
           'domains.0.value': [
             {required: true, message: '域名不能为空', trigger: 'blur'},
             {max:5, message: '長度至多為5'},
